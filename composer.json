@@ -1,0 +1,35 @@
+{
+  "name": "imanrjb/passport-auth",
+  "description": "Laravel and Lumen passport package",
+  "keywords": [],
+  "license": "MIT",
+  "type": "library",
+  "require": {
+    "laravel/passport": "^10.3",
+    "hisorange/browser-detect": "^4.4"
+  },
+  "authors": [
+    {
+      "name": "Iman Rajabi",
+      "email": "iman.rjb@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "PassportAuth\\": "src/"
+    },
+    "files": [
+      "src/Helper/functions.php"
+    ]
+  },
+  "config": {
+    "platform-check": false
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "PassportAuth\\Src\\PassportAuthServiceProvider"
+      ]
+    }
+  }
+}
