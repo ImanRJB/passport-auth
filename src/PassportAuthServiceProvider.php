@@ -30,9 +30,9 @@ class PassportAuthServiceProvider extends ServiceProvider
     public function register()
     {
         // For load config files
-//        if (file_exists(__DIR__ . '/../src/config/bitcoind.php')) {
-//            $this->mergeConfigFrom(__DIR__ . '/../src/config/bitcoind.php', 'bitcoind');
-//        }
+        if (file_exists(__DIR__ . '/../src/config/auth.php')) {
+            $this->mergeConfigFrom(__DIR__ . '/../src/config/auth.php', 'auth');
+        }
         $this->app->register(Laravel\Passport\PassportServiceProvider::class);
     }
 }
