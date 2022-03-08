@@ -10,7 +10,7 @@ class PassportAuthServiceProvider extends ServiceProvider
 {
     public function boot()
     {
-        $this->app->singleton(Connection::class, function() {
+        $this->app->singleton(Connection::class, function () {
             return $this->app['db.connection'];
         });
 
@@ -37,7 +37,7 @@ class PassportAuthServiceProvider extends ServiceProvider
         if (file_exists(__DIR__ . '/../src/config/passport.php')) {
             $this->mergeConfigFrom(__DIR__ . '/../src/config/passport.php', 'passport');
         }
-        
+
         $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
     }
 }
