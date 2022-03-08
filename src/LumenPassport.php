@@ -72,7 +72,7 @@ class LumenPassport
 
         $defaultOptions = [
             'prefix' => 'oauth',
-            'namespace' => '\Laravel\Passport\Http\Controllers',
+            'namespace' => '\PassportAuth\Http\Controllers',
         ];
 
         $options = array_merge($defaultOptions, $options);

@@ -33,6 +33,11 @@ class PassportAuthServiceProvider extends ServiceProvider
         if (file_exists(__DIR__ . '/../src/config/auth.php')) {
             $this->mergeConfigFrom(__DIR__ . '/../src/config/auth.php', 'auth');
         }
-        $this->app->register(Laravel\Passport\PassportServiceProvider::class);
+
+        if (file_exists(__DIR__ . '/../src/config/passport.php')) {
+            $this->mergeConfigFrom(__DIR__ . '/../src/config/passport.php', 'passport');
+        }
+        
+        $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
     }
 }
