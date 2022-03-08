@@ -6,7 +6,8 @@
   "type": "library",
   "require": {
     "laravel/passport": "^10.3",
-    "hisorange/browser-detect": "^4.4"
+    "hisorange/browser-detect": "^4.4",
+    "nyholm/psr7": "^1.5"
   },
   "authors": [
     {

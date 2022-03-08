@@ -4,7 +4,7 @@ namespace PassportAuth\Http\Controllers;
 
 use Laravel\Passport\Passport;
 use Laravel\Passport\Token;
-use Laminas\Diactoros\Response as Psr7Response;
+use Nyholm\Psr7\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use PassportAuth\LumenPassport;
 
@@ -31,7 +31,7 @@ class AccessTokenController extends \Laravel\Passport\Http\Controllers\AccessTok
                 $this->makePasswordGrant(), LumenPassport::tokensExpireIn(null, $clientId)
             );
 
-            return $this->server->respondToAccessTokenRequest($request, new Psr7Response);
+            return $this->server->respondToAccessTokenRequest($request, new Response());
         });
 
         if ($response->getStatusCode() < 200 || $response->getStatusCode() > 299) {
