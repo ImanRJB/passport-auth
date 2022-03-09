@@ -30,13 +30,10 @@ class PassportAuthServiceProvider extends ServiceProvider
     public function register()
     {
         // For load config files
-        if (file_exists(__DIR__ . '/../src/config/auth.php')) {
-            $this->mergeConfigFrom(__DIR__ . '/../src/config/auth.php', 'auth');
-        }
-
-        if (file_exists(__DIR__ . '/../src/config/passport.php')) {
-            $this->mergeConfigFrom(__DIR__ . '/../src/config/passport.php', 'passport');
-        }
+        $this->publishes([
+            __DIR__ . '/../src/config/auth.php' => config_path('auth.php'),
+            __DIR__ . '/../src/config/passport.php' => config_path('passport.php'),
+        ], 'passport-auth');
 
         $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
         $this->app->register(\LumenVendorPublish\LumenVendorPublishServiceProvider::class);
