@@ -1,9 +1,4 @@
-# lumen-passport
-[![Total Downloads](https://poser.pugx.org/dusterio/lumen-passport/d/total.svg)](https://packagist.org/packages/imanrjb/passport-auth)
-[![Latest Stable Version](https://poser.pugx.org/dusterio/lumen-passport/v/stable.svg)](https://packagist.org/packages/imanrjb/passport-auth)
-[![Latest Unstable Version](https://poser.pugx.org/dusterio/lumen-passport/v/unstable.svg)](https://packagist.org/packages/imanrjb/passport-auth)
-[![License](https://poser.pugx.org/dusterio/lumen-passport/license.svg)](https://packagist.org/packages/imanrjb/passport-auth)
-
+# Passport Auth
 Making Laravel Passport work with Lumen
 
 A simple service provider that makes Laravel Passport work with Lumen
