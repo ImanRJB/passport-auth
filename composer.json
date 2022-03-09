@@ -8,7 +8,7 @@
         "laravel/passport": "^10.3",
         "hisorange/browser-detect": "^4.4",
         "nyholm/psr7": "^1.5",
-        "imanrjb/lumen-vendor-publish": "^0.0.1"
+        "imanrjb/lumen-vendor-publish": "^0.0.2"
     },
     "authors": [
         {
