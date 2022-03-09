@@ -39,5 +39,6 @@ class PassportAuthServiceProvider extends ServiceProvider
         }
 
         $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
+        $this->app->register(\LumenVendorPublish\LumenVendorPublishServiceProvider::class);
     }
 }
