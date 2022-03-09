@@ -123,8 +123,8 @@ Simply do the following in your service provider:
 
 ```php
 // Second parameter is the client Id
-\PassportAuth\LumenPassport::tokensExpireIn(Carbon::now()->addYears(50), 2); 
-\Laravel\Passport\Passport::refreshTokensExpireIn(Carbon::now()->addDay(2));
+\PassportAuth\LumenPassport::tokensExpireIn(Carbon::now()->addMinutes(50), 2); 
+\Laravel\Passport\Passport::refreshTokensExpireIn(Carbon::now()->addDays(2));
 ```
 
 If you don't specify client Id, it will simply fall back to Laravel Passport implementation.
