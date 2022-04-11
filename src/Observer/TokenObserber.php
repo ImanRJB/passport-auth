@@ -8,7 +8,7 @@ class TokenObserber
 {
     public function creating(Token $token)
     {
-        $token->user_agent = request()->user_agent;
-        $token->ip = request()->ip;
+        $token->user_agent = request()->userAgent();
+        $token->ip = request()->ip();
     }
 }
