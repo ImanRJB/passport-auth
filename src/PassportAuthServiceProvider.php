@@ -5,6 +5,8 @@ namespace PassportAuth;
 use Illuminate\Support\ServiceProvider;
 use PassportAuth\Console\Commands\Purge;
 use Illuminate\Database\Connection;
+use Laravel\Passport\Token;
+use PassportAuth\Observer\TokenObserber;
 
 class PassportAuthServiceProvider extends ServiceProvider
 {
@@ -25,6 +27,8 @@ class PassportAuthServiceProvider extends ServiceProvider
                 Purge::class
             ]);
         }
+
+        Token::observe(TokenObserber::class);
     }
 
     public function register()
