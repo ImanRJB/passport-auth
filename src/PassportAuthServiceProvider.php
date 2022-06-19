@@ -47,7 +47,9 @@ class PassportAuthServiceProvider extends ServiceProvider
             $this->mergeConfigFrom(__DIR__ . '/../src/config/passport.php', 'passport');
         }
 
-        $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
-        $this->app->register(\LumenVendorPublish\LumenVendorPublishServiceProvider::class);
+        if (!$this->app instanceof \Illuminate\Foundation\Application) {
+            $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
+            $this->app->register(\LumenVendorPublish\LumenVendorPublishServiceProvider::class);
+        }
     }
 }
